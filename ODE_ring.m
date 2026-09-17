@@ -1,10 +1,3 @@
-%% Optical Ordinary Differential Equation (ODE) Solver via Silicon Photonic MRR
-% Based on: "Compact tunable silicon photonic ODE solver", Optics Express (2014)
-% Implementation of the Through-Port First-Order All-Optical ODE Solver
-%
-% This script compares:
-%  1. Ideal First-Order ODE Transfer Function (Coupled-Mode Theory / Baseband Target ODE)
-%  2. Full Periodic Physical MRR Transfer Function (Exact Add-Drop Microring Model)
 
 clear; close all; clc;
 

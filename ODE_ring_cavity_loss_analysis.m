@@ -1,22 +1,4 @@
-%% Optical ODE Solver via Silicon Photonic MRR: Cavity Loss & Drop-Port Leakage Analysis
-% Based on: "Compact tunable silicon photonic ODE solver", Optics Express (2014)
-%
-% This script investigates the sensitivity of the through-port optical ODE solver
-% to silicon waveguide propagation loss (alpha) and quantifies the optical power
-% leakage at the drop port across the [4.0 to 14.0] dB/cm fabrication range.
-%
-% Key physical phenomena investigated:
-%  1. Realized ODE coefficients a0(alpha) and b0(alpha) with fixed couplers.
-%  2. Transition across coupling regimes:
-%       - Over-coupled   : b0 < 0  (alpha < alpha_crit)
-%       - Critically-cpl : b0 = 0  (alpha = alpha_crit, pure differentiator mode)
-%       - Under-coupled  : b0 > 0  (alpha > alpha_crit)
-%  3. Static Extinction Ratio / Notch Depth plunge at critical coupling.
-%  4. Solver error (NMSE) degradation due to fabrication loss deviations.
-%  5. Full optical pulse energy budget:
-%       - Through-port energy transmission
-%       - Drop-port optical energy leakage
-%       - Waveguide absorption & scattering dissipation inside the cavity
+
 
 clear; close all; clc;
 

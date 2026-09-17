@@ -1,38 +1,3 @@
-%% Second-Order Optical ODE Solver via Cascaded Silicon Photonic MRRs with Independent Thermal Noise
-% Reference: J. Wu et al., "Compact tunable silicon photonic differential-equation
-%            solver for general linear time-invariant systems," Optics Express 22(21),
-%            26254-26264 (2014) [Section 2, Eq. (9), Fig. 1(c)].
-%
-% Theoretical Framework (Second-Order LTI Optical ODE):
-% -----------------------------------------------------
-% By cascading two add-drop microring resonators (MRRs) with tunable interferometric
-% couplers, the system synthesizes a general second-order linear time-invariant (LTI)
-% differential equation:
-%
-%   d^2 y(t)/dt^2 + a1 * dy(t)/dt + a0 * y(t) = b2 * d^2 x(t)/dt^2 + b1 * dx(t)/dt + b0 * x(t)
-%
-% where b2 = 1 and the constant coefficients are synthesized from the individual 1st-order MRRs:
-%   a1 = a10 + a20                  [rad/s]
-%   a0 = a10 * a20                  [(rad/s)^2]
-%   b1 = b10 + b20                  [rad/s]
-%   b0 = b10 * b20                  [(rad/s)^2]
-%
-% Spectral Transfer Function:
-%   T_ODE,2(w) = T1(w) * T2(w) = [(jw + b10)(jw + b20)] / [(jw + a10)(jw + a20)]
-%
-% Physical Model & Independent Thermal Noise:
-% -------------------------------------------
-% The physical cascaded system comprises:
-%  1. MRR 1: 2 interferometric couplers (Heaters 11 & 12) + Cavity Substrate 1.
-%  2. MRR 2: 2 interferometric couplers (Heaters 21 & 22) + Cavity Substrate 2.
-% Total: 4 independently controlled thermo-optic microheaters + 2 independent cavities.
-%
-% This script investigates:
-%  - Faithfulness of the 2nd-order cascaded optical solver compared to the ideal ODE.
-%  - Single-shot waveform distortion and inter-cavity detuning (notch splitting).
-%  - 200-trial Monte Carlo statistical analysis with +/-1sigma and +/-2sigma confidence bands.
-%  - Sensitivity comparison: 1st-Order Single-Ring vs. 2nd-Order Cascaded Solver across
-%    thermal control accuracies sigma_T in [1, 100] mK.
 
 clear; close all; clc;
 

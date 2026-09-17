@@ -1,29 +1,3 @@
-%% Silicon Photonic MRR ODE Solver: Thermal Tuning Range & Coefficient Extrema
-% Reference: J. Wu et al., "Compact tunable silicon photonic differential-equation
-%            solver for general linear time-invariant systems," Optics Express 22(21),
-%            26254-26264 (2014).
-%
-% Theoretical & Physical Purpose:
-% -------------------------------
-% Given the typical silicon waveguide propagation loss of the paper (alpha = 8.0 dB/cm),
-% this script computes the exact minimum and maximum achievable values of the
-% first-order ODE coefficients [a0, b0] as a function of the minimum and maximum
-% temperatures (T_min, T_max) applied to the thermo-optic microheaters controlling
-% the two interferometric couplers.
-%
-% Governing Equations (Coupled-Mode Theory):
-%   dy(t)/dt + a0*y(t) = dx(t)/dt + b0*x(t)
-%
-%   a0(T1, T2) = gamma_i + gamma_e1(T1) + gamma_e2(T2)
-%   b0(T1, T2) = gamma_i + gamma_e2(T2) - gamma_e1(T1)
-%
-% where:
-%   gamma_i       = (c * alpha_lin) / (2 * ng)  [Constant, fixed by alpha = 8 dB/cm]
-%   gamma_e1(T1)  = - (c * ln(1 - kappa1(T1))) / (2 * ng * L)
-%   gamma_e2(T2)  = - (c * ln(1 - kappa2(T2))) / (2 * ng * L)
-%   kappa1,2(T)   = 2 * kappa0 * (1 - kappa0) * [1 + cos(Delta_phi1,2(T))]
-%   Delta_phi1(T) = Delta_phi1_0 + (2*pi/lambda0) * (dn/dT) * Lb1 * (T1 - T_ambient)
-%   Delta_phi2(T) = Delta_phi2_0 + (2*pi/lambda0) * (dn/dT) * Lb2 * (T2 - T_ambient)
 
 clear; close all; clc;
 

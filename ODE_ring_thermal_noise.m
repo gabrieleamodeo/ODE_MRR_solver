@@ -1,19 +1,3 @@
-%% Optical ODE Solver via Silicon Photonic MRR with Realistic Thermal Noise
-% Based on: "Compact tunable silicon photonic ODE solver", Optics Express (2014)
-%
-% This script models thermal control inaccuracies in the thermo-optic phase
-% shifters of the microring resonator (MRR) ODE solver.
-%
-% In practical photonics laboratories, temperature control of on-chip heaters
-% and the chip substrate suffers from:
-%  1. Multi-channel DAC / heater driver electrical noise and quantization.
-%  2. Residual temperature fluctuations of the thermo-electric cooler (TEC).
-%  3. Thermal cross-talk between microheaters and the microring cavity.
-%
-% Typical lab thermal control accuracies:
-%  - Ultra-high precision closed-loop control : sigma_T ~ 5 mK 
-%  - Standard commercial lab TEC / driver     : sigma_T ~ 20 mK 
-%  - Open-loop / unshielded thermal drift     : sigma_T ~ 50-100 mK 
 
 clear; close all; clc;
 
